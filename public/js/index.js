@@ -7,6 +7,7 @@ import Action from './utils/eventActions.js';
 import Populate from './utils/populate.js';
 import { eventRoute } from './utils/helper.js';
 
+//APPLICATION START
 $(document).ready(async () => {
   //EVENT ROUTES
   eventRoute('.login-form', 'submit', Action.login);
