@@ -21,6 +21,8 @@ const commentRouter = require('./routes/commentRoutes');
 
 const app = express();
 
+app.enable('trust proxy');
+
 app.use(expressLayouts);
 app.set('layout', './layouts/main-layout.ejs');
 app.set('view engine', 'ejs');
