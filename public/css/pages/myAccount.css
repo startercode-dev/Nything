@@ -1,0 +1,17 @@
+/* **************************** */
+/* MY ACCOUNT SECTION   */
+/* **************************** */
+
+.container--account-setting {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section-account-settings {
+  padding-top: 5rem;
+}
+
+.section-password-change {
+  padding-bottom: 5rem;
+}

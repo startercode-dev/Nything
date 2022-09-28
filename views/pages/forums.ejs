@@ -1,0 +1,20 @@
+<main class="main container">
+  <h1 class="primary-header">Popular And Growing Communities</h1>
+  <section class="section-forums">
+    <ol class="forums-list">
+      <li class="forums-item">
+        <p class="forum-number"></p>
+        <div class="forum-icon"></div>
+        <p class="forum-name"></p>
+        <a class="follow-forum link">Follow</a>
+      </li>
+    </ol>
+  </section>
+  <aside class="aside-write-post">            
+    <div class="cta-post-submit">
+      <h2 class="cta-post-submit-header">Ready to submit a post?</h2>
+      <p class="cta-post-submit-secondary">Share something with the world</p>
+      <a class="cta-post-submit-link" href=<%=`/${ user ? 'post/create' : 'signup' }`%> >Write a post</a>
+    </div>
+  </aside>
+</main>

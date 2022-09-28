@@ -1,0 +1,35 @@
+/* **************************** */
+/* CREATE POST SECTION   */
+/* **************************** */
+
+.section-createPost {
+  margin: 1.6rem auto;
+  max-width: 65rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.createPost--header {
+  margin: 3.2rem 0;
+}
+
+.select-forums--input-box {
+  max-width: 35rem;
+}
+
+.input-box--text-area {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.input--text-area {
+  height: auto;
+}
+
+.submit-post-link {
+  align-self: flex-end;
+  width: 15rem;
+}

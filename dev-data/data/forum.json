@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "forum": "Fitness"
+  },
+  {
+    "id": "2",
+    "forum": "Cooking"
+  },
+  {
+    "id": "3",
+    "forum": "Finance"
+  },
+  {
+    "id": "4",
+    "forum": "Technology"
+  },
+  {
+    "id": "5",
+    "forum": "Sports"
+  },
+  {
+    "id": "6",
+    "forum": "Weather"
+  }
+]

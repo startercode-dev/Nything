@@ -1,0 +1,44 @@
+/* **************************** */
+/* LOGIN SECTION  */
+/* **************************** */
+
+.login-section {
+  height: calc(100vh - 6.2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.remember-me-box {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.forgot-password-box {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.forgot-password:link,
+.forgot-password:visited,
+.signup-link:link,
+.signup-link:visited {
+  display: inline;
+  color: #e76767;
+}
+
+.forgot-password:hover,
+.forgot-password:active,
+.signup-link:hover,
+.signup-link:active {
+  color: #ea7d7d;
+}
+
+.signup-link-request {
+  font-size: 1.2rem;
+}

@@ -1,0 +1,258 @@
+/* **************************** */
+/* POPULAR POST SECTION   */
+/* **************************** */
+
+.popular-posts-title {
+  margin-bottom: 0.8rem;
+  padding-top: 2.4rem;
+  padding-left: 1rem;
+}
+
+.section-content {
+  display: grid;
+  grid-template-columns: 1fr 35rem;
+  gap: 1.4rem;
+}
+
+.section-popular-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  /* height:calc(100vh - 11rem); */
+  overflow: auto;
+}
+
+.user-post-box {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 0.8rem;
+  row-gap: 0.2rem;
+}
+
+.popular-post-box {
+  padding: 1.6rem;
+  width: 100%;
+}
+
+.popular-post-box:hover {
+  box-shadow: inset 0 0 0 2px #dc2626;
+  cursor: pointer;
+}
+
+.popular-post-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+}
+
+.user-picture {
+  height: 3.2rem;
+  width: 3.2rem;
+  font-size: 1.6rem;
+  background: #60a5fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50rem;
+  font-weight: 400;
+  grid-row: 1/-3;
+}
+
+.postedBy {
+  font-weight: 400;
+}
+
+.username {
+  font-weight: 600;
+}
+
+.postDate {
+  font-weight: 400;
+}
+
+.comment-link:link,
+.comment-link:visited {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.6rem;
+  border-radius: 50rem;
+  background: #333;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+
+.comment-link:hover,
+.comment-link:active {
+  background: #444;
+}
+
+.popular-post-title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 2.4rem;
+}
+
+.post-engagement {
+  display: flex;
+  gap: 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #666;
+}
+
+.post-engagement-box {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* **************************** */
+/* POPULAR FORUM SECTION   */
+/* **************************** */
+
+.popular-forums {
+  border: solid 1px #edeef1;
+  background: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.popular-forum-list {
+  list-style: none;
+  counter-reset: item;
+}
+
+.popular-forum-item {
+  display: flex;
+  align-items: center;
+  border-top: solid 1px #edeef1;
+  padding: 0.8rem;
+}
+
+.popular-forum {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  margin-right: auto;
+}
+
+.popular-forums-header,
+.popular-user-header {
+  font-size: 2.4rem;
+  font-weight: 500;
+  padding: 1.6rem;
+}
+
+.forum-picture {
+  height: 3.2rem;
+  width: 3.2rem;
+  font-size: 1.6rem;
+  background: #60a5fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50rem;
+  font-weight: 400;
+  grid-row: 1/-3;
+}
+
+.popular-forum-list li {
+  counter-increment: item;
+}
+
+.popular-forums a {
+  text-decoration: none;
+}
+
+.popular-forum-list li:before {
+  content: counter(item);
+  margin-right: 3rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.popular-forum-link {
+  font-size: 1.4rem;
+  color: #000;
+  font-weight: 500;
+}
+
+.popular-forum-follow:link,
+.popular-forum-follow:visited {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.6rem;
+  border-radius: 50rem;
+  background: #333;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+
+.popular-forum-view-all:link,
+.popular-forum-view-all:visited {
+  border-radius: 50rem;
+  text-decoration: none;
+  background: #333;
+  color: #fff;
+  padding: 1.2rem 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.4rem 0.8rem;
+}
+
+.popular-forum-follow:hover,
+.popular-forum-follow:active,
+.popular-forum-view-all:hover,
+.popular-forum-view-all:active {
+  background: #444;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+/* **************************** */
+/* POST SUBMISSION SECTION   */
+/* **************************** */
+
+.cta-post-submit {
+  padding: 6.4rem 0.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cta-post-submit-header {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 0.8;
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+.cta-post-submit-secondary {
+  font-weight: 400;
+  text-align: center;
+  color: #666;
+  margin-bottom: 1.4rem;
+}
+
+.cta-post-submit-link {
+  border-radius: 50rem;
+  text-decoration: none;
+  background: #e35151;
+  color: #fff;
+  padding: 1.2rem 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.4rem 0.8rem;
+}

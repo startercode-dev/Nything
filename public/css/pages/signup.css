@@ -1,0 +1,79 @@
+/* **************************** */
+/* SIGNUP SECTION  */
+/* **************************** */
+
+.signup-section {
+  height: calc(100vh - 6.2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary-header {
+  color: #333;
+  font-size: 3.6rem;
+  font-weight: 500;
+  line-height: 0.8;
+  text-align: center;
+  margin: 2.4rem 0;
+}
+
+.signup-form {
+  margin: 0 auto;
+  padding: 3.2rem 2.4rem;
+  width: 45rem;
+  margin-bottom: 1.6rem;
+}
+
+.signup-rows {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1.8rem;
+}
+
+.signup-header {
+  font-size: 2.4rem;
+  font-weight: 500;
+  padding: 0.4rem 0;
+}
+
+.name-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.terms-policy-box {
+  display: flex;
+  gap: 0.8rem;
+  font-size: 1.2rem;
+  padding: 0.4rem 0;
+}
+
+.terms-policy-links:link,
+.terms-policy-links:visited,
+.login-link:link,
+.login-link:visited {
+  color: #e76767;
+}
+
+.terms-policy-links:hover,
+.terms-policy-links:active,
+.login-link:hover,
+.login-link:active {
+  color: #ea7d7d;
+}
+
+.form--signup:link,
+.form--signup:visited {
+  height: 4rem;
+  margin: 0.8rem 0;
+}
+
+.already-member {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1.6rem;
+}

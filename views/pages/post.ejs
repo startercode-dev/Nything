@@ -1,0 +1,70 @@
+<main class="main main--post">
+  <section class="section-post">
+    <div class="post-container">
+      <h3 class="post-forum page-title"><%- post.forum.forum %></h3>
+      <h1 class="post-title"><%- post.title %></h1>
+      <div class="user-post-box user-post-box--post">
+        <div class="user-picture"><%- post.user.firstName[0] %></div>
+        <p class="postedBy">
+          Posted by
+          <span class="username"
+            ><%- `${post.user.firstName} ${post.user.lastName[0]}.` %></span
+          >
+        </p>
+        <p class="postDate">
+          <%- post.createdAt.toLocaleDateString('en-US') %>
+        </p>
+      </div>
+      <p class="post-paragraph"><%- post.paragraph %></p>
+      <div class="post-engagement post-engagement--post">
+        <div class="post-engagement-box">
+          <ion-icon name="heart-circle-outline"></ion-icon>
+          <p class="likes"><span>80</span> likes</p>
+        </div>
+        <div class="post-engagement-box">
+          <ion-icon name="chatbox-outline"></ion-icon>
+          <p class="comment">
+            <span><%- post.comments.length %></span> Comments
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-comment">
+    <div class="post-container">
+      <h2 class="comments-header-secondary">Comments</h2>
+      <ul class="comment-list">
+        <% post.comments.forEach(item =>{ %>
+        <li class="comment-box">
+          <div class="user-post-box">
+            <div class="user-picture"><%- item.user.firstName[0] %></div>
+            <p class="postedBy">
+              Posted by
+              <span class="username"
+                ><%- `${item.user.firstName} ${item.user.lastName[0]}.`%></span
+              >
+            </p>
+            <p class="postDate">
+              <%- item.createdAt.toLocaleDateString('en-US') %>
+            </p>
+          </div>
+          <p class="post-comment"><%- item.comment %></p>
+        </li>
+        <% }); %>
+      </ul>
+      <form class="comment-form">
+        <label class="comment-input-label">Comment:</label>
+        <textarea
+          name="comment"
+          id="commentArea"
+          cols="30"
+          rows="1"
+          placeholder="Write your comment here...."
+        ></textarea>
+        <button type="submit" class="form--comment main-button btn">
+          Post Comment
+        </button>
+      </form>
+    </div>
+  </section>
+</main>

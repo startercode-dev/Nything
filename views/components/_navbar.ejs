@@ -1,0 +1,27 @@
+<header class="header">
+  <nav class="nav-bar">
+    <div class="nav-bar-left">
+      <a href="/" class="logo">N</a>
+      <div class="nav-search-box">
+        <input class="nav-search-input" type="text" placeholder="Search..." />
+        <ion-icon class="nav-search-icon" name="search-outline"></ion-icon>
+      </div>
+    </div>
+    <div class="nav-cta-box">
+      <% if(user){ %> <% if(page !== 'My-Post'){ %>
+      <a class="nav-myPost link" href="/post/me">My Posts</a>
+      <% } %>
+      <a class="nav-logout link" href="/">Logout</a>
+      <a class="nav-user" href="/account/update">
+        <img class="user-img" src= <%=`/img/user/${user.photo}` %>
+        alt="userimage" />
+        <span class="user-name"><%= user.firstName %></span>
+      </a>
+      <%}else{ if(page !== 'Login') {%>
+      <a class="nav-login link" href="/login">Login</a>
+      <% }%> <% if(page !== 'Signup') {%>
+      <a class="cta-signup main-link link" href="/signup">Signup</a>
+      <% }}%>
+    </div>
+  </nav>
+</header>

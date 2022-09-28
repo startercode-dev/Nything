@@ -1,0 +1,27 @@
+<main class="main container">
+  <section class="section-my-posts-page">
+    <h1 class="primary-header--my-posts">My Posts</h1>
+    <section class="section-my-posts">
+      <ol class="my-posts-list">
+        <% if(myPosts){ %>
+          <% myPosts.forEach(post =>{ %>
+            <li class="my-posts-item" data-id=<%- post._id %>>
+              <p class="my-posts-title"><%- post.title %></p>
+              <div class="my-post-edit-delete">
+                <ion-icon class="my-post-icons my-post-icons--delete" name="close-circle-outline"></ion-icon>
+                <ion-icon class="my-post-icons my-post-icons--edit" name="create-outline"></ion-icon>
+              </div>
+            </li>
+          <% }); %>
+        <% } %>
+      </ol>
+    </section>
+    <aside class="aside-write-post">            
+      <div class="cta-post-submit">
+        <h2 class="cta-post-submit-header">Ready to submit a post?</h2>
+        <p class="cta-post-submit-secondary">Share something with the world</p>
+        <a class="cta-post-submit-link" href=<%=`/${ user ? 'post/create' : 'signup' }`%> >Write a post</a>
+      </div>
+    </aside>
+  </section>
+</main>

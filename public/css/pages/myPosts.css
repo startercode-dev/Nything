@@ -1,0 +1,68 @@
+/* **************************** */
+/* MY POST SECTION   */
+/* **************************** */
+
+.section-my-posts-page {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 35rem;
+  column-gap: 1.8rem;
+  margin-bottom: 7rem;
+}
+
+.primary-header--my-posts {
+  grid-column: 1/-1;
+  text-align: center;
+  font-size: 3.6rem;
+  font-weight: 400;
+  padding: 3.2rem 0;
+}
+
+.my-posts-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.my-posts-item {
+  background: #e5e7eb;
+  padding: 1.8rem 1.6rem;
+
+  counter-increment: item;
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.my-posts-item::before {
+  content: counter(item);
+  margin-right: 3.6rem;
+}
+
+.my-posts-title {
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.my-posts-title:hover {
+  text-decoration: underline;
+  color: #e03c3c;
+}
+
+.aside-write-post .cta-post-submit {
+  padding-top: 0;
+}
+
+.my-post-edit-delete {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.my-post-icons {
+  cursor: pointer;
+  height: 2.4rem;
+  width: 2.4rem;
+}

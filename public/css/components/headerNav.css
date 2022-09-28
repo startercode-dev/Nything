@@ -1,0 +1,128 @@
+/* **************************** */
+/* HEADER/NAV  */
+/* **************************** */
+
+.header {
+  width: 100%;
+  padding: 1.2rem 0;
+  border-bottom: solid 1px #e5e7eb;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  width: 3.5rem;
+  font-size: 2.4rem;
+  background: #000;
+  color: #fff;
+  border-radius: 5px;
+  font-family: 'Acme', sans-serif;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 128rem;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.nav-bar-left {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.nav-search-box {
+  display: flex;
+  align-items: center;
+  border: solid 1px #d1d5db;
+  border-radius: 5px;
+  padding: 0 0.8rem;
+}
+
+.nav-search-input {
+  height: 3.2rem;
+  border: none;
+  width: 25rem;
+}
+
+.nav-search-icon {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+}
+
+.nav-cta-box {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.nav-login:link,
+.nav-login:visited {
+  color: #dc2626;
+  border: solid 1px #dc2626;
+}
+
+.nav-login:hover,
+.nav-login:active {
+  background: #fce9e9;
+}
+
+.nav-myPost:link,
+.nav-myPost:visited,
+.nav-logout:link,
+.nav-logout:visited {
+  color: #dc2626;
+}
+
+.nav-logout:hover,
+.nav-logout:active {
+  background: #fce9e9;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0 1.8rem;
+}
+
+.nav-user:link,
+.nav-user:visited {
+  text-decoration: none;
+  color: #dc2626;
+}
+
+.nav-user:hover,
+.nav-user:active {
+  transition: 0.3s;
+  transform: translateY(-0.2rem);
+}
+
+.nav-user:hover .user-img {
+  box-shadow: 1px 2px 7px #d1d5db;
+}
+
+.nav-user:hover .user-name {
+  text-shadow: 3px 2px 7px #d1d5db;
+}
+
+.user-img {
+  width: 3.7rem;
+  height: 3.7rem;
+  border-radius: 10rem;
+  border: solid 1px #ea7d7d;
+}

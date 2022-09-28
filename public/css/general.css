@@ -1,0 +1,192 @@
+/*
+
+--- 01 TYPOGRAPHY SYSTEM
+
+- FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights:
+Default:
+Medium: 500
+Semi-bold:
+Bold:
+
+
+- Line heights:
+Default:
+Small:
+Medium:
+Paragraph default:
+Large:
+
+- Letter spacing
+-0.5px
+0.75px
+
+
+--- 02 COLORS
+
+- Primary: 
+#dc2626
+- Tints: 
+- Shade: 
+#e03c3c
+#e35151
+#e76767
+#ea7d7d
+#fce9e9
+- Accents: 
+- Greys:
+#222
+#333
+#555
+#666
+#888
+#e5e7eb
+#d1d5db
+#edeef1
+
+
+--- 05 SHADOWS
+
+
+--- 06 BORDER-RADIUS
+
+Default: 5px
+
+--- 07 WHITESPACE
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  background: #f3f4f6;
+  position: relative;
+}
+
+/* **************************** */
+/* GENERAL REUSABLE COMPONENTS  */
+/* **************************** */
+
+.container {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 0 4rem;
+  margin-top: 6.2rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* LINK BTN */
+.btn,
+.link:link,
+.link:visited {
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.6rem;
+  padding: 0.8rem 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:active,
+.link:hover,
+.link:active {
+}
+
+.main-button,
+.main-link:link,
+.main-link:visited {
+  background: #dc2626;
+  color: #fff;
+  border: solid 1px #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-button:hover,
+.main-button:active,
+.main-link:hover,
+.main-link:active {
+  background: #e03c3c;
+}
+
+/* BOXES  */
+.main-boxes {
+  border: solid 1px #d1d5db;
+  border-radius: 5px;
+  background: #fff;
+}
+
+/* TITLES  */
+.page-title {
+  color: #dc2626;
+  font-size: 1.4rem;
+}
+
+/* INPUT  */
+.input-box {
+  border: solid 1px #d1d5db;
+  border-radius: 5px;
+  padding: 0 0.8rem;
+  background: #fff;
+}
+.input {
+  height: 4rem;
+  border: none;
+  width: 100%;
+}
+
+/* FORMS */
+.submit-form {
+  margin: 0 auto;
+  padding: 3.2rem 2.4rem;
+  width: 45rem;
+  margin-bottom: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1.8rem;
+}
+.form-header {
+  font-size: 2.4rem;
+  font-weight: 500;
+  padding: 0.4rem 0;
+}
+.form-secondary {
+  font-size: 1.2rem;
+}

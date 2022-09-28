@@ -1,0 +1,35 @@
+<main class="main container">
+  <form class="section-createPost">
+    <h1 class="primary-header createPost--header">
+      <% if(page === "Post-Create"){ %> Write a post on Nything! <% } %> <%
+      if(page === "Post-Update"){ %> Update your post! <% } %>
+    </h1>
+    <div class="input-box select-forums--input-box">
+      <select name="forum" id="forumsSelect" class="input">
+        <option disabled selected>Choose a forum section</option>
+      </select>
+    </div>
+    <div class="input-box input-box--title">
+      <input
+        name="title"
+        type="text"
+        class="title-input input"
+        placeholder="Title of your post"
+      />
+    </div>
+    <div class="input-box input-box--text-area">
+      <textarea
+        placeholder="Write Nything ....."
+        name="paragraph"
+        id="paragraph"
+        cols="30"
+        rows="20"
+        class="input input--text-area"
+      ></textarea>
+    </div>
+    <button type="submit" class="submit-post-link main-button btn" href="/">
+      <% if(page === "Post-Update"){ %> Update Now <% }%> <% if(page ===
+      "Post-Create"){ %> Submit Now <% }%>
+    </button>
+  </form>
+</main>

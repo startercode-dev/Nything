@@ -1,0 +1,63 @@
+<main class="main container">
+  <h3 class="popular-posts-title page-title">Popular posts</h3>
+  <section class="section-content">
+    <section class="section-popular-posts">
+      <% if(popularPosts){ %>
+        <% popularPosts.forEach(r =>{ %>
+          <div class="popular-post-box main-boxes" data-id=<%- `${r._id}`%>>
+            <header class="popular-post-header">
+              <div class="user-post-box">
+                <div class="user-picture"><%- `${r.user.firstName[0]}` %></div>
+                <p class="postedBy">
+                  Posted by
+                  <span class="username"><%- `${r.user.firstName} ${r.user.lastName[0]}.` %></span>
+                </p>
+                <p class="postDate"><%- r.createdAt.toLocaleDateString('en-US') %></p>
+              </div>
+              <a class="comment-link" href="/">Comment</a>
+            </header>
+            <h1 class="popular-post-title">
+              <%- r.title %>
+            </h1>
+            <div class="post-engagement">
+              <div class="post-engagement-box">
+                <ion-icon name="heart-circle-outline"></ion-icon>
+                <p class="likes"><span>80</span> likes</p>
+              </div>
+              <div class="post-engagement-box">
+                <ion-icon name="chatbox-outline"></ion-icon>
+                <p class="comment"><span><%- r.comments.length %></span> comments</p>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      <% } %>
+    </section>
+    <aside class="aside-section">
+      <div class="aside-container">
+        <div class="popular-forums">
+          <h2 class="popular-forums-header">Popular Forums</h2>
+          <ol class="popular-forum-list">
+            <% if(topFiveForums){ %>
+              <% topFiveForums.forEach(r => { %>
+                <li class="popular-forum-item">
+                  <div class="popular-forum">
+                    <div class="forum-picture"><%= r[0] %></div>
+                    <a class="popular-forum-link" href="/"><%= r %></a>
+                  </div>
+                  <a class="popular-forum-follow" href="/">Follow</a>
+                </li>            
+              <% }); %>
+            <% } %>
+          </ol>
+          <a class="popular-forum-view-all" href="/">View All</a>
+        </div>
+        <div class="cta-post-submit">
+          <h2 class="cta-post-submit-header">Ready to submit a post?</h2>
+          <p class="cta-post-submit-secondary">Share something with the world</p>
+          <a class="cta-post-submit-link" href=<%=`/${ user ? 'post/create' : 'signup' }`%> >Write a post</a>
+        </div>
+      </div>
+    </aside>
+  </section>  
+</main>
