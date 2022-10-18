@@ -60,13 +60,21 @@ app.use(xss());
 // Prevent parameter pollution
 app.use(hpp());
 
+// app.use(
+//   helmet({
+//     contentSecurityPolicy: false,
+//   })
+// );
 app.use(
-  helmet({
-    contentSecurityPolicy: false,
+  helmet.contentSecurityPolicy({
+    directives: {
+      'script-src': ["'self'", 'https://unpkg.com'],
+      'default-src': ["'self'", 'http:', 'ws:'],
+      'frame-ancestors': ["'self'", 'https://unpkg.com'],
+    },
   })
 );
 
-// app.options('*', cors());
 app.use(cors());
 app.options('*', cors());
 
