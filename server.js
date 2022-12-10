@@ -22,15 +22,15 @@ const connectDB = async () => {
       useCreateIndex: true,
       useFindAndModify: false,
       useUnifiedTopology: true,
-    })
-    console.log('DB connection successful'));
+    });
+    console.log('DB connection successful');
   } catch (err) {
     console.log(err);
     process.exit(1);
   }
 };
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 const server = connectDB().then(() => {
   app.listen(port, () => {
     console.log(`Running at port ${port} ...`);
