@@ -15,18 +15,26 @@ const DB = process.env.DATABASE.replace(
   process.env.DATABASE_PASSWORD
 );
 
-mongoose
-  .connect(DB, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log('DB connection successful'));
+const connectDB = async () => {
+  try {
+    mongoose.connect(DB, {
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+      useUnifiedTopology: true,
+    })
+    console.log('DB connection successful'));
+  } catch (err) {
+    console.log(err);
+    process.exit(1);
+  }
+};
 
-const port = process.env.PORT || 3000;
-const server = app.listen(port, () => {
-  console.log(`App running on port ${port}...`);
+const port = process.env.PORT;
+const server = connectDB().then(() => {
+  app.listen(port, () => {
+    console.log(`Running at port ${port} ...`);
+  });
 });
 
 process.on('unhandledRejection', (err) => {
